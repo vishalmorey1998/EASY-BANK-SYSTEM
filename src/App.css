@@ -1,0 +1,8 @@
+.mynav{
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+
+}
