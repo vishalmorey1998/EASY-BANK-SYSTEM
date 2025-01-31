@@ -15,7 +15,7 @@ if(auth.isCustomer)
   alert("Enquiry Service")
 }
 else{
-  axios.get(`http://localhost:9095/employee_details/employee/${auth.username}/${auth.password}`)
+  axios.get(`http://localhost:9096/employee/employee-login/${auth.employeeUsername}/${auth.employeePassword}`)
          .then(res=>{
          if(res.status===200)
          {
@@ -45,13 +45,13 @@ else{
                 <div className='mt-2'>
                    <label className='form-label'> <b> Enter UserName:</b></label>
                
-                  <input type='text'className=' text-center border border-info form-control'{...register('username')} ></input>
+                  <input type='text'className=' text-center border border-info form-control'{...register('employeeUsername')} ></input>
                  
                 </div>
                 <div className='mt-2'>
                    <label className='form-label'> <b> Enter Password:</b></label>
                
-                  <input type='password'className=' text-center border border-info form-control'{...register('password')} ></input>
+                  <input type='password'className=' text-center border border-info form-control'{...register('employeePassword')} ></input>
                  
                 </div>
                 <div className='mt-2 me-5  mb-2'>

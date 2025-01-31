@@ -21,12 +21,12 @@ function UserLayout() {
      <ProfileNav user={user}/>
      <div className='row'>
       <div className=' col col-3'>
-      <SideNav userType={user.userType}/>
+      <SideNav employeeType={user.employeeType}/>
       </div>
       <div className='col col-9'>
-  <Routes>
-      <Route path='add_employee' element={<AddEmployee/>}/> 
-      <Route path='view_employee' element={<ViewEmployee/>}/>
+      <Routes>
+                
+                  <Route path="add_employee" element={<AddEmployee/>}/>
 
   </Routes>
 

@@ -9,8 +9,8 @@ function ProfileNav({user}) {
             <img src={`data:image/jpeg;base64,${user.employeeImage}`}
                 width={'100px'} style={{border:'2px solid white',borderRadius:'180px'}}/>
                 <div >
-                    <h1 className='fs-4 text-white'>Name:{`${user.employeeFirstName} ${user.employeeMiddleName} ${user.employeeLastName}`}</h1>
-                    <h2 className='fs-6 text-warning'>User Type:{user.userType}</h2>
+                    <h1 className='fs-4 text-white'>Name:{`${user.employeeName}`}</h1>
+                    <h2 className='fs-6 text-warning'>User Type:{user.employeeType}</h2>
 
                 </div>
                         
