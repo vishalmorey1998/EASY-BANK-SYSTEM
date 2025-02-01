@@ -20,7 +20,7 @@ function AddEmployee()
                           formdata.append(epancard,empPan);
                           formdata.append(eAadhar,empAadaar);
                          
-                         axios.post('http://localhost:9090/employee/add-employee',formData)
+                         axios.post('http://localhost:9096/employee/add-employee',formData)
          .then(res=>
          {
             if(res.status===201)

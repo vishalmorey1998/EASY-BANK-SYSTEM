@@ -27,6 +27,7 @@ function UserLayout() {
       <Routes>
                 
                   <Route path="add_employee" element={<AddEmployee/>}/>
+                  <Route path="view_employee" element={<ViewEmployee/>}/>
 
   </Routes>
 
