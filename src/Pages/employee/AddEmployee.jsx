@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom';
 
 function AddEmployee() 
 {
@@ -11,21 +13,23 @@ function AddEmployee()
               
 
                          const [user,setUser]=useState([])
-
+                          const navigate=useNavigate();
                          function saveData(data)
                          {
                           const formdata=new FormData();
                           formdata.append('data',JSON.stringify(data));
-                          formdata.append(eImage,empImage);
-                          formdata.append(epancard,empPan);
-                          formdata.append(eAadhar,empAadaar);
                          
-                         axios.post('http://localhost:9096/employee/add-employee',formData)
+                          formdata.append('epancard',empPan);
+                          formdata.append('eAadhar',empAadaar);
+                          formdata.append('eImage',empImage);
+                         
+                         axios.post('http://localhost:9096/employee/add-employee',formdata)
          .then(res=>
          {
             if(res.status===201)
             {
                 alert("Employee Saved Data")
+                navigate('view_employee')
             }
          }
          ).catch(error=>
@@ -109,13 +113,13 @@ function AddEmployee()
                 <div className='mt-2'>
                 <label >Select Employee Pancard</label>
                 <input type='file' className='border border-black form-control '
-                onChange={events=>setEmpImage(events.target.files[0])}></input>
+                onChange={events=>setEmpPan(events.target.files[0])}></input>
                 </div>
 
                 <div className='mt-2'>
                 <label >Select Employee Aadhar</label>
                 <input type='file' className='border border-black form-control '
-                onChange={events=>setEmpImage(events.target.files[0])}></input>
+                onChange={events=>setEmpAadhar(events.target.files[0])}></input>
                 </div>
             
                 <div className='justify-content-center'>
