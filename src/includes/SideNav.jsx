@@ -8,7 +8,7 @@ const Options={
 
     {label:'Add Employee',path:basepath+"/add_employee" },
     { label:'View Employee',path:basepath+"/view_employee"},
-    {label:'App Statatics', path:basepath+"/app_info"}
+    // {label:'App Statatics', path:basepath+"/app_info"}
     
   ],
   CRM:[
@@ -20,16 +20,16 @@ const Options={
 }
 
 
-function SideNav(userType) {
+function SideNav({employeeType}) {
 
   
   return (
     <div className='bg-dark text-white mynav '>
       
        {
-         userType && Options[userType].map((option,index)=> (
+         employeeType && Options[employeeType].map((option,index)=> (
             <Link key={index} className='btn btn-light'
-                  to={option.url}>{option.label}</Link>
+                  to={option.path}>{option.label}</Link>
         ))
        }
     </div>
