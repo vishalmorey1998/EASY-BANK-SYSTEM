@@ -85,8 +85,7 @@ function Enquiry() {
               <input type='radio' name='gender' {...register('accountHolderDetails.accountHolderGender')} value="FEMALE"/>Female <br/>
               <input type='radio' name='gender' {...register('accountHolderDetails.accountHolderGender')} value="OTHER"/>Other <br/>
 
-
-            </div>
+             </div>
             <div>
                 <label >Select AadharCard</label>
                 <input type='file' className='border border-black form-control '
