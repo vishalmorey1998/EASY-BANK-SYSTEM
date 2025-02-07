@@ -4,6 +4,10 @@ import React, { useEffect, useState } from 'react'
 function ViewEmployee() {
   const[employee,setEmployee]=useState([]);
 
+
+
+  
+
   const getAllEmployee =()=>
   {
 
@@ -96,3 +100,26 @@ export default ViewEmployee
 // 	private EmployeeEnum isActive;
 // 	@Enumerated(EnumType.STRING)
 // 	private EmployeeType employeeType;
+
+// function Search()
+// {
+//     const[ProductName,setProductName]=useState("");
+
+//     const handlechange=event=>setProductName(event.target.value);
+
+//     function onSearch(event)
+//     {
+//         event.preventDefault();
+//         alert("Search Product")
+//     }
+//     return (
+//         <div className="border">
+//             <form onSubmit={onSearch}>
+//             <h1>Searching Product</h1>
+//             <input type="text" onChange={handlechange}/>
+//             <button>Search</button>
+//             </form>
+//             <h1>User Searching:{ProductName}</h1>
+//         </div>
+//     )
+// }
