@@ -47,7 +47,7 @@ function AddEmployee()
       <div>
         <h1 className='text-center'>Add Employee</h1>
       </div>
-      <div>
+      <div >
         <form onSubmit={handleSubmit(saveData)}>
         <div className='mt-2  '>
             <label className='form-label'> <b>Employee Name :</b></label>
