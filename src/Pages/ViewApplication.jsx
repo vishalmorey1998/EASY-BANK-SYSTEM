@@ -32,10 +32,10 @@ function ViewApplication() {
                 <thead>
                 <tr className='table-info'>
 
-                    <th>accountNumber</th>
+                    <th>accountHolderId</th>
                     <th>accountHolderName</th>
                    <th>accountHolderDateOfBirth</th>
-                     <th>accountHolderId</th>
+                     <th>accountNumber</th>
                     <th>accountType</th>
                     <th>accountHolderAdharCard</th>
                     <th>accountStatus</th>

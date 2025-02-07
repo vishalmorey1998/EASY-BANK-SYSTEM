@@ -20,10 +20,10 @@ function Preview() {
             .then(res=>{
               console.log(res)
                         
-              const ref=["accountNumber","accountType","currentBalance","accountStatus","accountHolderDetails"];
+              const ref=["accountNumber","accountType","currentBalance","accountStatus"];
               for(let prop in res.data)
               {
-                console.log(prop)
+           
                 if(ref.includes(prop))
                 {
                   setValue(prop ,res.data[prop])
@@ -35,6 +35,7 @@ function Preview() {
                     setPhoto(res.data[prop].accountHolderPhoto)
                     setJoiningLetter(res.data[prop].accountHolderJoiningLatter)
                     setSalarySlip(res.data[prop].accountHolderSalarySlip)
+                    console.log(1)
                 }
                
               }
@@ -42,6 +43,8 @@ function Preview() {
               
             )
     } 
+
+    
     useEffect(getEmployee , [] );
 
          
