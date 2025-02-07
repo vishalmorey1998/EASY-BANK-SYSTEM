@@ -4,6 +4,8 @@ import SideNav from '../includes/SideNav';
 import { Route, Routes } from 'react-router-dom';
 import AddEmployee from '../Pages/employee/AddEmployee';
 import ViewEmployee from '../Pages/employee/ViewEmployee';
+import ViewApplication from '../Pages/ViewApplication';
+import Preview from '../Pages/Preview';
 
 function UserLayout() {
   const[user,setUser]=useState({});
@@ -28,6 +30,9 @@ function UserLayout() {
                 
                   <Route path="add_employee" element={<AddEmployee/>}/>
                   <Route path="view_employee" element={<ViewEmployee/>}/>
+                  <Route path="view_application" element={<ViewApplication/>}/>
+                  <Route path="preview_application/:id" element={<Preview/>}/>
+
 
   </Routes>
 

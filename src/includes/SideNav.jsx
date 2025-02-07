@@ -12,9 +12,7 @@ const Options={
     
   ],
   CRM:[
-    {label:'Pending Enquiry', path:basepath+"/pending_enquiry"},
-    {label:'Send FeedBak', path:basepath+"/send_feedback"},
-    {label:'Pending Application', path:basepath+"/pending_application"}
+    {label:'View Application', path:basepath+"/view_application"}
   ],
   OE:[]
 }
