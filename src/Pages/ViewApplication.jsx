@@ -32,10 +32,10 @@ function ViewApplication() {
                 <thead>
                 <tr className='table-info'>
 
-                    <th>accountHolderId</th>
+                    <th>accountNumber</th>
                     <th>accountHolderName</th>
                    <th>accountHolderDateOfBirth</th>
-                     <th>accountNumber</th>
+                     <th>accountHolderId</th>
                     <th>accountType</th>
                     <th>accountHolderAdharCard</th>
                     <th>accountStatus</th>
@@ -61,9 +61,8 @@ function ViewApplication() {
 
                             >Preview</button> */}
 
-                            <Link className='btn btn-primary' to={`/userlayout/enquiry/${ach.accountNumber}`}>Preview</Link>
-                            
-
+                            <Link className='btn btn-primary' to={`/userlayout/preview_application/${ach.accountNumber}`}>Preview</Link>
+                          
 
                             </td>
 
