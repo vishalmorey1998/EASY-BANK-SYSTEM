@@ -100,9 +100,11 @@ function AddEmployee()
 
             <div>
 
+             </div>
 
 
-            </div>
+
+             
 
             <div className='mt-2'>
                 <label >Select Employee Image</label>
