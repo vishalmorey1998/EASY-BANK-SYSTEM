@@ -12,7 +12,19 @@ const navigate=useNavigate();
     {
 if(auth.isCustomer)
 {
-  alert("Enquiry Service")
+ alert("Enquiry Service")  
+
+ axios.get(`http://localhost:9091/accountDetail/coustomerLogin/${auth.employeeUsername}/${auth.employeePassword}`)
+         .then(res=>{
+         if(res.status===200)
+         {
+          sessionStorage.setItem("customer",JSON.stringify(res.data));
+          console.log(res.data)
+          navigate('/customerlayout')
+         
+         }
+         })
+         .catch(error=>alert(error.response.data))
 }
 else{
                                             
@@ -23,19 +35,14 @@ else{
           sessionStorage.setItem("user",JSON.stringify(res.data));
           navigate('/userlayout')
          }
+         
+
          })
+         
          .catch(error=>alert(error.response.data))
 }
+
     }
-
-
-
-
-
-
-
-
-
 
 
   return (

@@ -7,6 +7,9 @@ import ViewEmployee from '../Pages/employee/ViewEmployee';
 import ViewApplication from '../Pages/ViewApplication';
 import Preview from '../Pages/Preview';
 
+
+
+
 function UserLayout() {
   const[user,setUser]=useState({});
 
@@ -32,7 +35,6 @@ function UserLayout() {
                   <Route path="view_employee" element={<ViewEmployee/>}/>
                   <Route path="view_application" element={<ViewApplication/>}/>
                   <Route path="preview_application/:id" element={<Preview/>}/>
-
 
   </Routes>
 

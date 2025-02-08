@@ -13,13 +13,13 @@ const Options={
   ],
   CRM:[
     {label:'View Application', path:basepath+"/view_application"}
+  
   ],
   OE:[]
 }
 
 
 function SideNav({employeeType}) {
-
   
   return (
     <div className='bg-dark text-white mynav '>
