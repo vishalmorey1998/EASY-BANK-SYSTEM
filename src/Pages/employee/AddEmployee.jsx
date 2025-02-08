@@ -47,7 +47,7 @@ function AddEmployee()
       <div>
         <h1 className='text-center'>Add Employee</h1>
       </div>
-      <div >
+      <div className='card bg-info'>
         <form onSubmit={handleSubmit(saveData)}>
         <div className='mt-2  '>
             <label className='form-label'> <b>Employee Name :</b></label>
@@ -55,16 +55,7 @@ function AddEmployee()
                                                 {...register('employeeName')}></input>
             </div>
 
-            <div className='mt-2'>
-                <select     {...register('employeeDesignation')} >
-                      <option defaultChecked={true}>Select Designation</option>
-                      <option value="CRM">Customer Relationship Execative</option>
-                      <option value="OE">Opertional Execative</option>
-                      <option value="AH">Account Head</option>
-                      <option value="CM">Cash Manegar</option>
-                      <option value="BRANCH_HEAD">BRANCH_HEAD</option>
-                </select>
-            </div>
+           
 
             <div className='mt-2  '>
             <label className='form-label'> <b>Employee Address :</b></label>
@@ -86,6 +77,16 @@ function AddEmployee()
             <input className='form-control border border-dark text-center' type='text'  placeholder='Enter email' {...register('employeeEmail')}></input>
             </div>
 
+            <div className='mt-2'>
+                <select     {...register('employeeDesignation')} >
+                      <option defaultChecked={true}>Select Designation</option>
+                      <option value="CRM">Customer Relationship Execative</option>
+                      <option value="OE">Opertional Execative</option>
+                      <option value="AH">Account Head</option>
+                      <option value="CM">Cash Manegar</option>
+                      <option value="BRANCH_HEAD">BRANCH_HEAD</option>
+                </select>
+            </div>
            
             <div className='mt-2'>
                 <select     {...register('isActive')}      >
@@ -124,7 +125,7 @@ function AddEmployee()
                 onChange={events=>setEmpAadhar(events.target.files[0])}></input>
                 </div>
             
-                <div className='justify-content-center'>
+                <div className='text-center mb-2'>
                     <button className='btn btn-success w-25 mt-3'>Submit</button>
                 </div>
 

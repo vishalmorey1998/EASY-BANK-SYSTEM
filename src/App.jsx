@@ -5,6 +5,7 @@ import VisitorLayout from './layout/VisitorLayout'
 import UserLayout from './layout/UserLayout'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import CustomerLayout from './layout/CustomerLayout'
 function App() {
 
 
@@ -14,6 +15,7 @@ function App() {
     <Routes>
       <Route path='/*' element={<VisitorLayout/>}/>
       <Route path='/userlayout/*' element={<UserLayout/>}/>
+      <Route path='/customerlayout/*' element={<CustomerLayout/>}/>
     </Routes>
     
     
